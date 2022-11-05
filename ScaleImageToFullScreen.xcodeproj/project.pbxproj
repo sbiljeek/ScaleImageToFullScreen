@@ -13,6 +13,7 @@
 		BAF4B8A22916CBC5000767D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF4B8A02916CBC5000767D7 /* Main.storyboard */; };
 		BAF4B8A42916CBC7000767D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF4B8A32916CBC7000767D7 /* Assets.xcassets */; };
 		BAF4B8A72916CBC7000767D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF4B8A52916CBC7000767D7 /* LaunchScreen.storyboard */; };
+		BAF4B8AF2916CC30000767D7 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF4B8AE2916CC30000767D7 /* FullScreenImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BAF4B8A32916CBC7000767D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAF4B8A62916CBC7000767D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAF4B8A82916CBC7000767D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAF4B8AE2916CC30000767D7 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BAF4B89A2916CBC5000767D7 /* AppDelegate.swift */,
 				BAF4B89C2916CBC5000767D7 /* SceneDelegate.swift */,
 				BAF4B89E2916CBC5000767D7 /* ViewController.swift */,
+				BAF4B8AE2916CC30000767D7 /* FullScreenImageViewController.swift */,
 				BAF4B8A02916CBC5000767D7 /* Main.storyboard */,
 				BAF4B8A32916CBC7000767D7 /* Assets.xcassets */,
 				BAF4B8A52916CBC7000767D7 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				BAF4B89F2916CBC5000767D7 /* ViewController.swift in Sources */,
 				BAF4B89B2916CBC5000767D7 /* AppDelegate.swift in Sources */,
 				BAF4B89D2916CBC5000767D7 /* SceneDelegate.swift in Sources */,
+				BAF4B8AF2916CC30000767D7 /* FullScreenImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
