@@ -9,6 +9,17 @@ import UIKit
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    var startingFrame: CGRect?
+    var fullScreenViewController: FullScreenImageViewController!
+    var selectedImageView: UIView?
+    
+    var topConstraint: NSLayoutConstraint?
+    var leadingConstraint: NSLayoutConstraint?
+    var widthConstraint: NSLayoutConstraint?
+    var heightConstraint: NSLayoutConstraint?
+    
+    let blurVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -112,17 +123,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.startingFrame = startingFrame
     }
-    
-    var startingFrame: CGRect?
-    var fullScreenViewController: FullScreenImageViewController!
-    var selectedImageView: UIView?
-    
-    var topConstraint: NSLayoutConstraint?
-    var leadingConstraint: NSLayoutConstraint?
-    var widthConstraint: NSLayoutConstraint?
-    var heightConstraint: NSLayoutConstraint?
-    
-    let blurVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
     
     fileprivate func beginAnimationOfFullScreenViewController(_ navigationController: UIViewController) {
         self.selectedImageView?.alpha = 0
