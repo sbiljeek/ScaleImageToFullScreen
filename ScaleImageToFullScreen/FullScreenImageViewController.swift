@@ -38,6 +38,13 @@ class FullScreenImageViewController: UIViewController, UIGestureRecognizerDelega
         self.setupCloseButton()
     }
     
+    var dismissHandler: (() ->())?
+    
+    @objc fileprivate func handleDismiss(button: UIButton) {
+        button.isHidden = true
+        dismissHandler?()
+    }
+    
     lazy var closeButton: UIButton = {
         let closeButtonColor: UIColor = .white
         let xmarkCircleFill = UIImage(systemName: "xmark.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.label)
@@ -54,13 +61,6 @@ class FullScreenImageViewController: UIViewController, UIGestureRecognizerDelega
         button.layer.shadowOffset = CGSize(width: 0, height: 3)
         return button
     }()
-    
-    var dismissHandler: (() ->())?
-    
-    @objc fileprivate func handleDismiss(button: UIButton) {
-        button.isHidden = true
-        dismissHandler?()
-    }
     
     fileprivate func setupCloseButton() {
         let buttonWidth: CGFloat = 37

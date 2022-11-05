@@ -124,16 +124,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         self.startingFrame = startingFrame
     }
     
-    fileprivate func beginAnimationOfFullScreenViewController(_ navigationController: UIViewController) {
+    fileprivate func beginAnimationOfFullScreenViewController(_ viewController: UIViewController) {
         self.selectedImageView?.alpha = 0
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.7, options: .curveEaseOut) {
             self.blurVisualEffectView.alpha = 1
             
             self.topConstraint?.constant = 0
             self.leadingConstraint?.constant = 0
-            self.widthConstraint?.constant = navigationController.view.frame.width
-            self.heightConstraint?.constant = navigationController.view.frame.height
-            navigationController.view.layoutIfNeeded()
+            self.widthConstraint?.constant = viewController.view.frame.width
+            self.heightConstraint?.constant = viewController.view.frame.height
+            viewController.view.layoutIfNeeded()
         } completion: { _ in
             //.
         }
