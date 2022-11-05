@@ -34,42 +34,9 @@ class FullScreenImageViewController: UIViewController, UIGestureRecognizerDelega
         imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//        let gesture = UIPanGestureRecognizer(target: self, action: #selector(imageViewPanGestureRecognizerHandler))
-//        self.view.addGestureRecognizer(gesture)
         
         self.setupCloseButton()
     }
-    
-//    var imageViewInitialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
-    
-//    @objc fileprivate func imageViewPanGestureRecognizerHandler(_ sender: UIPanGestureRecognizer) {
-//        guard let view = sender.view else { return }
-//        let touchPoint = sender.location(in: view.window)
-//
-//        if sender.state == UIGestureRecognizer.State.began {
-//            imageViewInitialTouchPoint = touchPoint
-//        } else if sender.state == UIGestureRecognizer.State.changed {
-//            let offSet = touchPoint.y - imageViewInitialTouchPoint.y
-//            if offSet > 0 {
-//                view.frame = CGRect(x: 0, y: touchPoint.y - imageViewInitialTouchPoint.y, width: view.frame.size.width, height: view.frame.size.height)
-//            }
-//            let alpha = (view.frame.size.height / (offSet + view.frame.size.height))
-//            view.backgroundColor = .black.withAlphaComponent(alpha)
-//        } else if sender.state == UIGestureRecognizer.State.ended || sender.state == UIGestureRecognizer.State.cancelled {
-//            let offSet = touchPoint.y - imageViewInitialTouchPoint.y
-//            if offSet > 100 {
-//                self.dismiss(animated: true, completion: nil)
-//                UIView.animate(withDuration: 0.3, animations: {
-//                    view.backgroundColor = .black.withAlphaComponent(0)
-//                })
-//            } else {
-//                UIView.animate(withDuration: 0.3, animations: {
-//                    view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-//                    view.backgroundColor = .black.withAlphaComponent(1)
-//                })
-//            }
-//        }
-//    }
     
     lazy var closeButton: UIButton = {
         let closeButtonColor: UIColor = .white
@@ -88,20 +55,11 @@ class FullScreenImageViewController: UIViewController, UIGestureRecognizerDelega
         return button
     }()
     
-//    @objc fileprivate func handleDismiss(button: UIButton) {
-//        self.dismiss(animated: true)
-//    }
-    
     var dismissHandler: (() ->())?
     
     @objc fileprivate func handleDismiss(button: UIButton) {
-//        if !self.isModal { //self.isPreview {
-//            self.dismiss(animated: true)
-//        } else {
-            button.isHidden = true
-            dismissHandler?()
-//        }
-//        self.incrementViews()
+        button.isHidden = true
+        dismissHandler?()
     }
     
     fileprivate func setupCloseButton() {
