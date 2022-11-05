@@ -67,7 +67,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         guard let imageView = sender.view as? UIImageView else { return }
         guard let image = imageView.image else { return }
         
-        // #1 setup the FullScreenViewController
+        // #1 Setup the FullScreenViewController
         self.setupFullScreenViewController(image: image)
         
         // #2 Setup FullScreenViewController in its starting position
@@ -101,7 +101,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         viewController.addChild(self.fullScreenViewController)
         
-        self.setupPostViewControllerStartingCellFrame(imageView)
+        self.setupFullScreenViewControllerStartingCellFrame(imageView)
         guard let startingFrame = self.startingFrame else { return }
         
         fullScreenView.translatesAutoresizingMaskIntoConstraints = false
@@ -114,7 +114,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         viewController.view.layoutIfNeeded()
     }
     
-    fileprivate func setupPostViewControllerStartingCellFrame(_ imageView: UIImageView) {
+    fileprivate func setupFullScreenViewControllerStartingCellFrame(_ imageView: UIImageView) {
         let imageViewWidth: CGFloat = imageView.frame.width
         let imageViewHeight: CGFloat = imageView.frame.height
         let imageViewY = imageView.frame.minY
